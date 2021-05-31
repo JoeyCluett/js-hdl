@@ -1,0 +1,32 @@
+<html>
+<body>
+
+<div id="print_div"></div>
+
+<script src="lib/hdl_backend.js"></script>
+<script src="lib/utility.js"></script>
+<script src="lib/main.js"></script>
+
+<!-- user-defined starting point -->
+<script src="src/hello_world.js"></script>
+
+<script>
+
+    // specify where execution should start
+    const app_init_fn = hello_world;
+
+    // user-defined functions, modules, etc.
+    const modules_list = [
+        "modules/mod_74181.js",
+        "modules/mod_xor.js",
+        "modules/mod_sign_ext.js"
+    ];
+
+    main_setup();
+    window.onload=app_init_fn;
+
+</script>
+
+</body>
+</html>
+
