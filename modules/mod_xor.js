@@ -10,11 +10,11 @@ class module_xor {
         this.Y = OUTPUT();
 
         let bottom = NAND();
-        this.top   = NAND();
+        let top    = NAND();
         let left   = NAND();
         let right  = NAND();
 
-        this.top.add_input(left, right);
+        top.add_input(left, right);
         right.add_input(bottom, this.B);
         left.add_input(bottom, this.A);
         bottom.add_input(this.A, this.B);
